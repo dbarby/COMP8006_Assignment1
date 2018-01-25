@@ -21,10 +21,11 @@ do
 		"	
 	 cat << 'MENU'
 	1................................... Install iptables
- 	2................................... Flush iptables
- 	3................................... Configure fireware
- 	4................................... Start Fireware
- 	5................................... Quit
+ 	2................................... Check iptables
+ 	3................................... Flush iptables
+ 	4................................... Configure fireware
+ 	5................................... Start Fireware
+ 	6................................... Quit
 
 
 MENU
@@ -35,20 +36,24 @@ MENU
 		[1])	dnf install iptables
 			;;
 
+		#Check iptables
+		[2])	iptables -L
+			;;
+
 		#Flush iptables
-		[2])	sh flush.sh
+		[3])	sh flush.sh
 			;;
 
 		#Configure fireware
-		[3])	vi firewall.sh
+		[4])	vi firewall.sh
 			;;
 
 		#Start Fireware
-		[4])	sh firewall.sh
+		[5])	sh firewall.sh
 			;;
 			
 		#Quit
-		[5])	exit
+		[6])	exit
 			;;
 		
 		[Ee])	echo 	

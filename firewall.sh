@@ -15,3 +15,5 @@
 #Permit inbound/outbound ssh packets.
 iptables -A INPUT -p tcp --dport 22
 iptables -A OUTPUT -p tcp --sport 22
+
+#Permit inbound/outbound www packets.
