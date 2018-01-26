@@ -8,12 +8,13 @@
 #	
 # Notes			: N/A
 #------------------------------------------------------------------
-
+#Delete Existing Rules	
 iptables -F
 iptables --flush
 
 iptables -X
 
+#Set Default Chain Policies
 iptables -P INPUT ACCEPT
 iptables -P FORWARD ACCEPT
 iptables -P OUTPUT ACCEPT
